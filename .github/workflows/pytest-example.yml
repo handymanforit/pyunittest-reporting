@@ -20,3 +20,11 @@ jobs:
         pip install pytest
         pip install pytest-cov
         pytest --junitxml=junit/test-results.xml --cov=tests --cov-report=xml --cov-report=html
+    
+    - name: Convert Junit to Trx
+      run: |
+        /JunitToTrxConverter/ConsoleApp2.exe junit/test-results.xml test-results.trx
+    
+    - name: Convert Trx to Html
+      run: |
+        TrxConsole/TrxerConsole.exe test-results.trx
