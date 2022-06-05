@@ -23,7 +23,7 @@ jobs:
     
     - name: Convert Junit to Trx
       run: |
-        /JunitToTrxConverter/ConsoleApp2.exe junit/test-results.xml test-results.trx
+        JunitToTrxConverter/ConsoleApp2.exe junit/test-results.xml test-results.trx
     
     - name: Convert Trx to Html
       run: |
