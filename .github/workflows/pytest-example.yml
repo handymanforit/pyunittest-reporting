@@ -19,7 +19,7 @@ jobs:
       run: |
         pip install pytest
         pip install pytest-cov
-        pytest --junitxml=junit/test-results.xml --cov=tests --cov-report=xml --cov-report=html
+        pytest --continue-on-collection-errors --junitxml=junit/test-results.xml --cov=tests --cov-report=xml --cov-report=html 
     
     - name: Convert Junit to Trx
       run: |
