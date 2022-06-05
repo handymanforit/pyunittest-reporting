@@ -43,9 +43,9 @@ jobs:
     
     - name: Upload Coverage Artifact
       uses: actions/upload-artifact@v2.3.0
-         with:
-         name: test-coverage-report
+      with:
+         name: test-results-archive
          path: |
-              test-results.trx
-              test-results.trx.html
-              junit/test-results.xml
+           test-results.trx
+           test-results.trx.html
+           junit/test-results.xml
