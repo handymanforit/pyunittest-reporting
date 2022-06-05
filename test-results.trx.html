@@ -925,7 +925,7 @@ function CalculateTestsStatuses(testContaineId, canvasId) {
                     </td>
                     <td class="Message">
                     </td>
-                    <td class="Message">3 ms</td>
+                    <td class="Message">2 ms</td>
                   </tr>
                   <tr id="ID0A1B03BStacktrace" class="hiddenRow">
                     <td colspan="6">
@@ -973,13 +973,24 @@ function CalculateTestsStatuses(testContaineId, canvasId) {
                 <tbody>
                   <tr class="Test">
                     <th scope="row" class="column1">1/1/2008 12:00:01 AM</th>
-                    <td class="passed">PASSED</td>
+                    <td class="failed">Error</td>
                     <td class="Function">tests.01_basic_test.test_example</td>
-                    <td class="Messages">
-                    </td>
+                    <td class="Messages"><a style="float:right;" id="ID0ARC0TCStacktraceToggle" href="javascript:ShowHide('ID0ARC0TCStacktrace','ID0ARC0TCStacktraceToggle','Show Stacktrace','Hide Stacktrace');">Show Stacktrace</a>AssertionError: assert {'Baz': [5, 7..., 'C': 'TDD'}} == {'Baz': [3, 5..., 'C': 'TDD'}}
+  Omitting 2 identical items, use -vv to show
+  Differing items:
+  {'Baz': [5, 7, 11]} != {'Baz': [3, 5, 7]}
+  Full diff:
+    {
+  -  'Baz': [3, 5, 7],
+  ?          ---
+  +  'Baz': [5, 7, 11],
+  ?              ++++
+     'Foo': 'Bar',
+     'Qux': {'A': 'Boston', 'B': 'Python', 'C': 'TDD'},
+    }<br></td>
                     <td class="Message">
                     </td>
-                    <td class="Message">1 ms</td>
+                    <td class="Message">4 ms</td>
                   </tr>
                   <tr id="ID0ARC0TCStacktrace" class="hiddenRow">
                     <td colspan="6">
@@ -987,8 +998,27 @@ function CalculateTestsStatuses(testContaineId, canvasId) {
                       <table>
                         <tbody>
                           <tr class="visibleRow">
-                            <td class="ex">
-                            </td>
+                            <td class="ex">def test_example():
+        """
+        But really, test cases should be callables containing assertions:
+        """
+        print("\nRunning test_example...")
+&gt;       assert DATA_SET_A == DATA_SET_C
+E       AssertionError: assert {'Baz': [5, 7..., 'C': 'TDD'}} == {'Baz': [3, 5..., 'C': 'TDD'}}
+E         Omitting 2 identical items, use -vv to show
+E         Differing items:
+E         {'Baz': [5, 7, 11]} != {'Baz': [3, 5, 7]}
+E         Full diff:
+E           {
+E         -  'Baz': [3, 5, 7],
+E         ?          ---
+E         +  'Baz': [5, 7, 11],
+E         ?              ++++
+E            'Foo': 'Bar',
+E            'Qux': {'A': 'Boston', 'B': 'Python', 'C': 'TDD'},
+E           }
+
+tests\01_basic_test.py:9: AssertionError</td>
                           </tr>
                         </tbody>
                       </table>
@@ -1056,7 +1086,7 @@ function CalculateTestsStatuses(testContaineId, canvasId) {
                     </td>
                     <td class="Message">
                     </td>
-                    <td class="Message">2 ms</td>
+                    <td class="Message">1 ms</td>
                   </tr>
                   <tr id="ID0A6D0BEStacktrace" class="hiddenRow">
                     <td colspan="6">
@@ -1133,7 +1163,7 @@ function CalculateTestsStatuses(testContaineId, canvasId) {
                     </td>
                     <td class="Message">
                     </td>
-                    <td class="Message">2 ms</td>
+                    <td class="Message">1 ms</td>
                   </tr>
                   <tr id="ID0ANF0PFStacktrace" class="hiddenRow">
                     <td colspan="6">
@@ -1156,7 +1186,7 @@ function CalculateTestsStatuses(testContaineId, canvasId) {
                     </td>
                     <td class="Message">
                     </td>
-                    <td class="Message">2 ms</td>
+                    <td class="Message">1 ms</td>
                   </tr>
                   <tr id="ID0AEG0GGStacktrace" class="hiddenRow">
                     <td colspan="6">
@@ -2178,7 +2208,7 @@ function CalculateTestsStatuses(testContaineId, canvasId) {
                     </td>
                     <td class="Message">
                     </td>
-                    <td class="Message">2 ms</td>
+                    <td class="Message">1 ms</td>
                   </tr>
                   <tr id="ID0ALHAE0NHAEStacktrace" class="hiddenRow">
                     <td colspan="6">
@@ -2616,7 +2646,7 @@ function CalculateTestsStatuses(testContaineId, canvasId) {
                     </td>
                     <td class="Message">
                     </td>
-                    <td class="Message">2 ms</td>
+                    <td class="Message">1 ms</td>
                   </tr>
                   <tr id="ID0AESAE0GSAEStacktrace" class="hiddenRow">
                     <td colspan="6">
@@ -3797,7 +3827,7 @@ function CalculateTestsStatuses(testContaineId, canvasId) {
                     </td>
                     <td class="Message">
                     </td>
-                    <td class="Message">3 ms</td>
+                    <td class="Message">2 ms</td>
                   </tr>
                   <tr id="ID0ADWAG0FWAGStacktrace" class="hiddenRow">
                     <td colspan="6">
@@ -3919,21 +3949,12 @@ function CalculateTestsStatuses(testContaineId, canvasId) {
           </tr>
           <tr>
             <th scope="row" class="column1">1/1/2008 12:00:01 AM</th>
-            <td class="passed">PASSED</td>
-            <td class="Function slowest">tests.00_empty_test
-                      .tests.00_empty_test.test_empty</td>
+            <td class="failed">Error</td>
+            <td class="Function slowest">tests.01_basic_test
+                      .tests.01_basic_test.test_example</td>
             <td>
             </td>
-            <td class="Message slowest">3 ms</td>
-          </tr>
-          <tr>
-            <th scope="row" class="column1">1/1/2008 12:00:01 AM</th>
-            <td class="passed">PASSED</td>
-            <td class="Function slowest">tests.16_scoped_and_meta_fixtures_test
-                      .tests.16_scoped_and_meta_fixtures_test.test_scoped_fixtures[50]</td>
-            <td>
-            </td>
-            <td class="Message slowest">3 ms</td>
+            <td class="Message slowest">4 ms</td>
           </tr>
           <tr>
             <th scope="row" class="column1">1/1/2008 12:00:01 AM</th>
@@ -3952,6 +3973,15 @@ function CalculateTestsStatuses(testContaineId, canvasId) {
             <td>
             </td>
             <td class="Message slowest">3 ms</td>
+          </tr>
+          <tr>
+            <th scope="row" class="column1">1/1/2008 12:00:01 AM</th>
+            <td class="passed">PASSED</td>
+            <td class="Function slowest">tests.00_empty_test
+                      .tests.00_empty_test.test_empty</td>
+            <td>
+            </td>
+            <td class="Message slowest">2 ms</td>
           </tr>
           <tr>
             <td colspan="5">

@@ -1002,25 +1002,62 @@
     <TestEntry testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testId="00000000-0000-00ae-A281-000000DD006D" executionId="00000000-0000-00ae-A281-000000EE006D" />
   </TestEntries>
   <Results>
-    <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.00_empty_test.test_empty" computerName="" duration="00:00:00.00300" testId="00000000-0000-00ae-A281-0000000DD001" executionId="00000000-0000-00ae-A281-0000000EE001" outcome="Passed">
+    <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.00_empty_test.test_empty" computerName="" duration="00:00:00.00200" testId="00000000-0000-00ae-A281-0000000DD001" executionId="00000000-0000-00ae-A281-0000000EE001" outcome="Passed">
       <Output />
     </UnitTestResult>
-    <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.01_basic_test.test_example" computerName="" duration="00:00:00.00100" testId="00000000-0000-00ae-A281-0000000DD002" executionId="00000000-0000-00ae-A281-0000000EE002" outcome="Passed">
-      <Output />
+    <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.01_basic_test.test_example" computerName="" duration="00:00:00.00400" testId="00000000-0000-00ae-A281-0000000DD002" executionId="00000000-0000-00ae-A281-0000000EE002" outcome="Error">
+      <Output>
+        <ErrorInfo>
+          <Message>AssertionError: assert {'Baz': [5, 7..., 'C': 'TDD'}} == {'Baz': [3, 5..., 'C': 'TDD'}}
+  Omitting 2 identical items, use -vv to show
+  Differing items:
+  {'Baz': [5, 7, 11]} != {'Baz': [3, 5, 7]}
+  Full diff:
+    {
+  -  'Baz': [3, 5, 7],
+  ?          ---
+  +  'Baz': [5, 7, 11],
+  ?              ++++
+     'Foo': 'Bar',
+     'Qux': {'A': 'Boston', 'B': 'Python', 'C': 'TDD'},
+    }</Message>
+          <StackTrace>def test_example():
+        """
+        But really, test cases should be callables containing assertions:
+        """
+        print("\nRunning test_example...")
+&gt;       assert DATA_SET_A == DATA_SET_C
+E       AssertionError: assert {'Baz': [5, 7..., 'C': 'TDD'}} == {'Baz': [3, 5..., 'C': 'TDD'}}
+E         Omitting 2 identical items, use -vv to show
+E         Differing items:
+E         {'Baz': [5, 7, 11]} != {'Baz': [3, 5, 7]}
+E         Full diff:
+E           {
+E         -  'Baz': [3, 5, 7],
+E         ?          ---
+E         +  'Baz': [5, 7, 11],
+E         ?              ++++
+E            'Foo': 'Bar',
+E            'Qux': {'A': 'Boston', 'B': 'Python', 'C': 'TDD'},
+E           }
+
+tests\01_basic_test.py:9: AssertionError</StackTrace>
+        </ErrorInfo>
+      </Output>
     </UnitTestResult>
     <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.02_special_assertions_test.test_div_zero_exception" computerName="" duration="00:00:00.00100" testId="00000000-0000-00ae-A281-0000000DD003" executionId="00000000-0000-00ae-A281-0000000EE003" outcome="Passed">
       <Output />
     </UnitTestResult>
-    <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.02_special_assertions_test.test_keyerror_details" computerName="" duration="00:00:00.00200" testId="00000000-0000-00ae-A281-0000000DD004" executionId="00000000-0000-00ae-A281-0000000EE004" outcome="Passed">
+    <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.02_special_assertions_test.test_keyerror_details" computerName="" duration="00:00:00.00100" testId="00000000-0000-00ae-A281-0000000DD004" executionId="00000000-0000-00ae-A281-0000000EE004" outcome="Passed">
       <Output />
     </UnitTestResult>
     <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.02_special_assertions_test.test_approximate_matches" computerName="" duration="00:00:00.00100" testId="00000000-0000-00ae-A281-0000000DD005" executionId="00000000-0000-00ae-A281-0000000EE005" outcome="Passed">
       <Output />
     </UnitTestResult>
-    <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.03_simple_fixture_test.test_with_local_fixture" computerName="" duration="00:00:00.00200" testId="00000000-0000-00ae-A281-0000000DD006" executionId="00000000-0000-00ae-A281-0000000EE006" outcome="Passed">
+    <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.03_simple_fixture_test.test_with_local_fixture" computerName="" duration="00:00:00.00100" testId="00000000-0000-00ae-A281-0000000DD006" executionId="00000000-0000-00ae-A281-0000000EE006" outcome="Passed">
       <Output />
     </UnitTestResult>
-    <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.03_simple_fixture_test.test_with_global_fixture" computerName="" duration="00:00:00.00200" testId="00000000-0000-00ae-A281-0000000DD007" executionId="00000000-0000-00ae-A281-0000000EE007" outcome="Passed">
+    <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.03_simple_fixture_test.test_with_global_fixture" computerName="" duration="00:00:00.00100" testId="00000000-0000-00ae-A281-0000000DD007" executionId="00000000-0000-00ae-A281-0000000EE007" outcome="Passed">
       <Output />
     </UnitTestResult>
     <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.04_fixture_returns_test.test_with_data_fixture" computerName="" duration="00:00:00.00100" testId="00000000-0000-00ae-A281-0000000DD008" executionId="00000000-0000-00ae-A281-0000000EE008" outcome="Passed">
@@ -1125,7 +1162,7 @@
     <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.10_advanced_params-ception_test.test_advanced_fixtureception[b-2]" computerName="" duration="00:00:00.00100" testId="00000000-0000-00ae-A281-000000DD0029" executionId="00000000-0000-00ae-A281-000000EE0029" outcome="Passed">
       <Output />
     </UnitTestResult>
-    <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.10_advanced_params-ception_test.test_advanced_fixtureception[b-3]" computerName="" duration="00:00:00.00200" testId="00000000-0000-00ae-A281-000000DD002A" executionId="00000000-0000-00ae-A281-000000EE002A" outcome="Passed">
+    <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.10_advanced_params-ception_test.test_advanced_fixtureception[b-3]" computerName="" duration="00:00:00.00100" testId="00000000-0000-00ae-A281-000000DD002A" executionId="00000000-0000-00ae-A281-000000EE002A" outcome="Passed">
       <Output />
     </UnitTestResult>
     <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.10_advanced_params-ception_test.test_advanced_fixtureception[b-4]" computerName="" duration="00:00:00.00100" testId="00000000-0000-00ae-A281-000000DD002B" executionId="00000000-0000-00ae-A281-000000EE002B" outcome="Passed">
@@ -1170,7 +1207,7 @@
     <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.15_advanced_class_test.TestIntermediateClass.test1" computerName="" duration="00:00:00.00100" testId="00000000-0000-00ae-A281-000000DD0038" executionId="00000000-0000-00ae-A281-000000EE0038" outcome="Passed">
       <Output />
     </UnitTestResult>
-    <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.15_advanced_class_test.TestIntermediateClass.test2" computerName="" duration="00:00:00.00200" testId="00000000-0000-00ae-A281-000000DD0039" executionId="00000000-0000-00ae-A281-000000EE0039" outcome="Passed">
+    <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.15_advanced_class_test.TestIntermediateClass.test2" computerName="" duration="00:00:00.00100" testId="00000000-0000-00ae-A281-000000DD0039" executionId="00000000-0000-00ae-A281-000000EE0039" outcome="Passed">
       <Output />
     </UnitTestResult>
     <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.16_scoped_and_meta_fixtures_test.test_scoped_fixtures[1]" computerName="" duration="00:00:00.20200" testId="00000000-0000-00ae-A281-000000DD003A" executionId="00000000-0000-00ae-A281-000000EE003A" outcome="Passed">
@@ -1320,7 +1357,7 @@
     <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.16_scoped_and_meta_fixtures_test.test_scoped_fixtures[49]" computerName="" duration="00:00:00.00100" testId="00000000-0000-00ae-A281-000000DD006A" executionId="00000000-0000-00ae-A281-000000EE006A" outcome="Passed">
       <Output />
     </UnitTestResult>
-    <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.16_scoped_and_meta_fixtures_test.test_scoped_fixtures[50]" computerName="" duration="00:00:00.00300" testId="00000000-0000-00ae-A281-000000DD006B" executionId="00000000-0000-00ae-A281-000000EE006B" outcome="Passed">
+    <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.16_scoped_and_meta_fixtures_test.test_scoped_fixtures[50]" computerName="" duration="00:00:00.00200" testId="00000000-0000-00ae-A281-000000DD006B" executionId="00000000-0000-00ae-A281-000000EE006B" outcome="Passed">
       <Output />
     </UnitTestResult>
     <UnitTestResult startTime="2008-01-01T00:00:01.0000000+0:00" endTime="2008-01-01T00:00:02.0000000+0:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" testName="tests.19_re_usable_mock_test.test_re_usable_mocker" computerName="" duration="00:00:00.00300" testId="00000000-0000-00ae-A281-000000DD006C" executionId="00000000-0000-00ae-A281-000000EE006C" outcome="Passed">
