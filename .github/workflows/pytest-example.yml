@@ -29,3 +29,23 @@ jobs:
     - name: Convert Trx to Html
       run: |
         TrxConsole/TrxerConsole.exe test-results.trx
+        
+    - name: add the results to code.
+      run: |
+        git config user.email "you@example.com"
+        git config user.name "System"
+        git add junit/test-results.xml
+        git add test-results.trx
+        git add test-results.trx.html
+        git commit -m 'updating coverage'
+        git push
+        
+    
+    - name: Upload Coverage Artifact
+      uses: actions/upload-artifact@v2.3.0
+         with:
+         name: test-coverage-report
+         path: |
+              test-results.trx
+              test-results.trx.html
+              junit/test-results.xml
